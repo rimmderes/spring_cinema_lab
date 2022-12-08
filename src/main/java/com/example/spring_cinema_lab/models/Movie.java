@@ -4,12 +4,12 @@ package com.example.spring_cinema_lab.models;
 import javax.persistence.*;
 
 
-@Entity (name = "movies")
+@Entity (name = "movies")                         // create table
 public class Movie {
 
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int id;
+    private long id;
 
     @Column
     private String title;
@@ -28,12 +28,12 @@ public class Movie {
     }
 
 
-    public Movie(){}
+    public Movie(){}                                        // empty constructor = deserialise
 
 
     // GETTERS AND SETTERS
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

@@ -32,7 +32,7 @@ public class MovieService {
         return movieRepository.findAll();
     }
 
-    public Optional<Movie> getMovieById (int id) {
+    public Optional<Movie> getMovieById (long id) {
         return movieRepository.findById(id);
     }
 
